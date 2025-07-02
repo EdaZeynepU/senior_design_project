@@ -1,0 +1,82 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+a {
+  font-weight: 500;
+  color: #646cff;
+  text-decoration: inherit;
+}
+
+a:hover {
+  color: #535bf2;
+}
+
+.not-found{
+  background-image: url("../../images/404tr.png");
+  background-size: contain;
+}
+
+.home-option{
+  width: 30%;
+  min-width: 350px;
+  background-blend-mode: lighten;
+  filter: opacity(0.9);
+}
+
+.home-settings-options{
+  /* flex-basis: 250px; */
+  height: 130px;
+}
+
+
+.bg-home{
+  background-image: url("../../../public/images/jars_bg2.jpg");
+  background-size: cover;
+}
+
+#jarsBg{
+  position: fixed;
+  top: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url("../../../public/images/jars_bg1.jpg");
+  background-size: cover;
+}
+
+.not-found, .bg-home, #jarsBg {  
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.shadow-lg-light{
+  box-shadow: 0 1rem 3rem rgba(255, 255, 255, 0.9) !important;
+}
+
+.x{
+  filter: blur(4px);
+}
+
+.flashcard-header-pill {
+  background-color: rgb(244, 212, 215); /* Bootstrap 5 varsayılan primary rengi */
+  padding: 1.5rem;
+  border-radius: 50rem; /* Pill görünüm için yüksek bir değer */
+}
+/* Daha sonra dene */
+/* .vh-fill-available{
+  height: -webkit-fill-available;
+} */
+
+.note-status {
+  font-size: 0.8rem;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+}

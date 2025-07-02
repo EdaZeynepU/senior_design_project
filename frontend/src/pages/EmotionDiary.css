@@ -1,0 +1,62 @@
+.emotion-diary{
+    display: flex;
+    justify-content: space-around;
+    min-width: 90vw;
+}
+
+.emotion-diary > * {
+    width: 45vw !important;
+}
+
+.info-part{
+    padding: 45px 15px 10px 10px;
+}
+
+.info-part h1{
+    text-align: center;
+}
+
+
+.chosen-emotion{
+    margin: 25px 0;
+    text-transform: capitalize;
+}
+
+.emotion-info p{
+    padding: 20px;
+}
+
+.chosen-emotion{
+    padding: 10px;
+    border-radius: 5px;
+    text-indent: 5vw;
+}
+
+@media screen and (max-width: 1300px) {
+    .emotion-diary{
+        flex-direction: column;
+    }
+}
+
+.cute-button {
+  background: linear-gradient(135deg, #ffd1dc 0%, #ffe6f0 100%);
+  color: #4a2c6f;
+  border: none;
+  border-radius: 2rem;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.cute-button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(0,0,0,0.15);
+}
+
+.cute-button:active {
+  transform: translateY(0);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}

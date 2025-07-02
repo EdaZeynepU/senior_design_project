@@ -1,0 +1,193 @@
+:root {
+    /* --primary: rgb(126, 111, 99); */
+    --primary: #FFA600;
+    --primary-dark: #9e6803;
+    --primary-light: #faf0de;
+    /* --secondary: #6d00bb; */
+    --secondary: #5700bb;
+    --accent: #D8D8D8;
+    /* --accent2: #D6B3FF; */
+    --accent2: #e9cdfc;
+    --black: #181a1f;
+}
+
+
+.time-page-wrapper{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100vw;
+    min-height: 100vh;
+}
+
+.time-content{
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.time-display, .times-btns-wrapper, .change-mode{
+
+    /* margin-right: 5vw; */
+}
+
+
+.time-display{
+    text-align: center;
+}
+
+.change-mode{
+    display: flex;
+    gap: 5vw;
+    margin: 20px;
+    /* flex-direction: column; */
+}
+.change-mode a:hover{
+    border-bottom: 2px solid black;
+}
+.change-mode a{
+    border-bottom: 2px solid transparent;
+    transition: ease-in-out;
+    transition-duration: 500ms;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+/* .change-mode button{
+    border: solid 2px blue;
+    background-color: aliceblue;
+    padding: 15px 20px;
+    font-size: 1.2em;
+} */
+
+
+/* timers */
+.all-clock-setters{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2px;
+
+}
+
+.clock-setter-input {
+    width: 75px;
+    height: 70px;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+.clock-setter-wraper {
+    display: inline-flex;
+    flex-direction: column;
+}
+
+.inc-dec-btn {
+    padding: 5px;
+    font-size: 1.1rem;
+    border: solid 2px var(--accent);
+    background: radial-gradient(white 1%, var(--accent));
+
+}
+
+.save-btn {
+    background: transparent;
+    border-radius: 50%;
+    padding: 12px;
+    align-content: center;
+    margin: 20px;
+}
+
+.clock-setter-input::-webkit-outer-spin-button,
+.clock-setter-input::-webkit-inner-spin-button {
+
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type=number] {
+    -moz-appearance: textfield;
+}
+
+
+.decorate_times{
+    position: absolute;
+    bottom: 20%;
+    transform: translate(0,20%);
+    /* animation: img-flow 2s ease-in-out alternate-reverse; */
+    animation: img-flow 2s ease-in-out;
+}
+
+.time-img{
+    right: -160px;
+}
+
+.timer-img{
+    right: -90px;
+}
+
+.pomodoro-img{
+    right: -130px;
+}
+
+.stopwatch-img{
+    height: 410px;
+    right: -140px;
+}
+
+.times-btns-wrapper{
+    display: flex;
+    justify-content: center;
+}
+
+.times-btn{
+    margin-top: 30px;
+    border: 1px solid var(--accent);
+    padding: 15px 25px;
+    transition-duration: 600ms;
+    cursor: pointer;
+}
+
+.times-btn:first-of-type{
+    border-start-start-radius: 30%;
+    border-end-start-radius: 30%;
+}
+
+.times-btn:last-of-type{
+    border-start-end-radius: 30%;
+    border-end-end-radius: 30%;
+}
+
+.times-btn:hover{
+    background-color: var(--primary-light);
+    color: var(--primary-dark);
+    padding: 15px 50px;
+}
+
+
+@keyframes img-flow {
+    10%{
+        right: 15px;
+    }
+    30%{
+        transform: rotate(8deg);
+    }
+    50%{
+        transform: rotate(-10deg);
+    }
+    65%{
+        transform: rotate(8deg);
+    }
+    80%{
+        transform: rotate(0deg);
+        right: 25px;
+        /* right: 20px; */
+    }
+    /* 100%{
+        right: -50px;
+    } */
+}

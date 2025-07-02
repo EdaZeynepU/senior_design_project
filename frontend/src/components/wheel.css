@@ -1,0 +1,114 @@
+.wheel-container {
+  position: relative;
+  display: flex;
+  margin: 100px auto 15px 20px;
+  height: 600px;
+  width: 900px;
+  padding-bottom: 100px; /* to center wheel*/
+  transform: scale(0.80) rotate(2deg);
+  font-size: 1.1rem;
+  text-align: center;
+}
+
+.wheel {
+  transform: rotate(15deg);
+  overflow: hidden;
+  position: relative;
+  width: 285px;
+  height: 285px;
+  border-radius: 100%;
+  border: 1px rgb(255, 255, 255) solid;
+  margin: auto;
+  cursor: pointer;
+
+}
+
+.slice-normal {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 140px;
+  height: 140px;
+  transform-origin: left bottom;
+}
+
+.slice-normal:hover {
+  background: white !important;
+}
+
+.wheel :nth-child(n + 4) .slice-normal>p {
+  margin-right: 0px;
+  padding-bottom: 5px;
+  width: 90px;
+  transform: rotate(0.28turn) translate(70px, 5px) skewY(5deg) skewX(-40deg) scale(0.7, 1);
+}
+
+.wheel :nth-child(-n+4) .slice-normal p {
+  margin-right: 0px;
+  width: 90px;
+  transform: rotate(0.29turn) translate(82px, -5px) skewY(5deg) skewX(-35deg) scale(-0.7, -1);
+}
+
+.wheel :nth-child(4) .slice-normal p {
+  transform: rotate(0.32turn) translate(80px, -15px) skewY(-15deg) skewX(-29deg) scale(-0.65, -1.15);
+
+}
+
+.slice {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: end;
+  align-items: center;
+  top: 0;
+  left: 50%;
+  width:280px;
+  height: 250px;
+  transform-origin: left bottom;
+  border-start-start-radius: 100%;
+  border-end-end-radius: 100%;
+  overflow: hidden;
+  cursor: pointer;
+}
+
+.outer-emotions {
+  height: 38%;
+}
+.outer-emotions p {
+  scale: 1 0.8;
+}
+
+.outer-emotions:nth-child(1) {
+  transform: translate(30px,-10px) rotate(48deg);
+  border-radius: 50% 50% 0 0;
+  width: 160px;
+  align-content: center;
+  padding-bottom: 10px;
+  background: #ffffff98;
+
+}
+
+.outer-emotions:nth-child(2) {
+  border-top: 1px solid rgb(255, 255, 255);
+  border-radius: 100%;
+  padding-bottom: 15px;
+  transform: translate(-30px, -50px) rotate(48deg);
+  width: 80%;
+  background: #ffffff69;
+  align-content: center;
+}
+
+.outer-emotions:hover {
+  background: white !important;
+}
+
+@media screen and (max-width: 1300px){
+  .wheel-container {
+    margin: 90px auto;
+  }
+  .info-part {
+    margin: auto;
+    text-align: center;
+    margin-top: -20px;
+  }
+}
